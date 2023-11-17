@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg="navigation" exec="map_saver" name="map_saver"/>
+    
+    <include file="$(find-pkg-share turtlebot3_navigation2)/launch/navigation2.launch.py">
+        <arg name="use_sim_time" value="True"/>
+        <arg name="slam" value="True"/>
+    </include>    
+    
+</launch>
